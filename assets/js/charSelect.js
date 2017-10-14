@@ -21,6 +21,10 @@ window.onload = function() {
 		//setup element classes
 		newCharacter.addClass("characterBox");
 		charImage.addClass("characterImage img-responsive");
+		charImage.attr("title", 
+					   "Name: " + charList[i].name + 
+					   "\nAttack Power: " + charList[i].atkPower +
+					   "\nHealth: " + charList[i].health);
 		charName.addClass("characterName");
 		//store index of character for reference purposes
 		newCharacter.attr("data-index", i);

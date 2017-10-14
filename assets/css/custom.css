@@ -17,6 +17,7 @@ body {
 
 .mkFont {
     font-family: "MortalKombat";
+    color: red;
 }
 
 .pgHead {
@@ -33,7 +34,6 @@ body {
 
 #charSelectHeader {
     font-size: 50px;
-    color: red;
     text-align: center;
     padding: 10px 0 10px 0;
 }
@@ -90,9 +90,11 @@ body {
 }
 
 #noOpponent {
-	font-family: "MortalKombat";
-	color: red;
 	font-size: 50px;
+}
+
+#compCharBox {
+	display: none;
 }
 
 #remainingCharList {
@@ -108,4 +110,17 @@ body {
 
 .remainingChars:hover {
 	box-shadow: 0 0 3pt 2pt black;
+}
+
+#userCharName, #compCharName {
+	font-size: 30px;
+}
+
+.charStats {
+	font-size: 20px;
+}
+
+#userLost {
+	font-size: 50px;
+	display: none;
 }

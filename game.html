@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Fight!</title>
-	<!-- Latest compiled and minified CSS -->
+    <title>Fight!</title>
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <!-- jquery link -->
@@ -12,35 +13,49 @@
     <script src="assets/js/charList.js"></script>
     <script src="assets/js/game.js"></script>
 </head>
+
 <body>
     <div class="jumbotron pgHead mkFont">
         Mortal Kombat
     </div>
     <div class="container">
-    	<div class="row">
-    		<div class="col-xs-12 col-md-4 centerStuff">
-    			<!--User Character will go here-->
-    			<img id="userCharImg" class="img-responsive img-responsive-center" src="" />
-    		</div>
-    		<div class="col-xs-12 col-md-4" id="padMe">
-    			<div class="row">
-    				<div class="col-xs-12 centerStuff padMe">
-    					<!--Fight Button-->
-    					<button type="button" class="btn btn-default" id="fightBtn">Fight!</button>
-    				</div>
-    				<div class="col-xs-12 padMe">
-    					<div id="remainingCharList">
-							<!-- Remaining characters spawn here-->
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    		<div class="col-xs-12 col-md-4 centerStuff">
-    			<!-- Computer Character goes here -->
-    			<p id="noOpponent">Pick an Opponent!</p>
-    			<img id="compCharImg" class="img-responsive img-responsive-center" src="" />
-    		</div>
-    	</div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 centerStuff">
+                <!--User Character will go here-->
+                <p class="mkFont" id="userLost"><span id="oppWinner"></span> wins!</p>
+                <div id="userCharBox">
+                    <p class="mkFont" id="userCharName"></p>
+                    <img id="userCharImg" class="img-responsive img-responsive-center" src="" />
+                    <p class="mkFont charStats">Health: <span id="userCharHealth"></span></p>
+                    <p class="mkFont charStats">Attack Power: <span id="userCharAtk"></span></p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4" id="padMe">
+                <div class="row">
+                    <div class="col-xs-12 centerStuff padMe">
+                        <!--Fight Button-->
+                        <button type="button" class="btn btn-default" id="fightBtn">Fight!</button>
+                    </div>
+                    <div class="col-xs-12 padMe">
+                        <h1 id="remainingCharHead" class="mkFont centerStuff">Remaining Opponents</h1>
+                        <div id="remainingCharList">
+                            <!-- Remaining characters spawn here-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 centerStuff">
+                <!-- Computer Character goes here -->
+                <p class="mkFont" id="noOpponent">Pick an Opponent!</p>
+                <div id="compCharBox">
+                    <p class="mkFont" id="compCharName"></p>
+                    <img id="compCharImg" class="img-responsive img-responsive-center" src="" />
+                    <p class="mkFont charStats">Health: <span id="compCharHealth"></span></p>
+                    <p class="mkFont charStats">Attack Power: <span id="compCharAtk"></span></p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
