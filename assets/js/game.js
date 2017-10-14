@@ -66,15 +66,28 @@ window.onload = function() {
         if (isCharChosen) {
             $("#fightBtn").html("Fight!")
             var currOpp = $("#compCharImg").attr("data-index");
+            //need to use temp variables to hold health values to make sure both attacks go through
+            var tempUserHealth = userHealth;
+            var tempCompHealth = compHealth;
+            //if this attack results in both characters dying, set both health to 0 for tie check later
+            if (((compHealth - userAtk) <= 0) && ((userHealth - compAtk) <= 0)) {
+            	compHealth = 0;
+            	userHealth = 0;
+            }
             //if computer health is greater than users attack, then attack user
-            if (compHealth > userAtk) {
-                userHealth -= compAtk;
+            if (compHealth >= userAtk) {
+                tempUserHealth -= compAtk;
             }
             //if user health is greater than comps attack, then attack comp
-            if (userHealth > compAtk) {
-                compHealth -= userAtk;
+            if (userHealth >= compAtk) {
+                tempCompHealth -= userAtk;
                 userAtk += 6;
             }
+            //reassign new health values to regular vars
+            if ((compHealth != 0) && (userHealth != 0)) {
+            	userHealth = tempUserHealth;
+            	compHealth = tempCompHealth;
+        	}
             //check to see if user should die on next attack
             if ((userHealth <= compAtk) && (userHealth > 0)) {
                 var finish = $("<audio>");
@@ -99,20 +112,25 @@ window.onload = function() {
                 finish[0].play();
             }
 
+            $("#userCharHealth").html(userHealth);
+            $("#userCharAtk").html(userAtk);
+            $("#compCharHealth").html(compHealth);
+            
             //handle if user is dead
             if (userHealth <= 0) {
                 $("#userCharBox").css("display", "none");
                 $("#userLost").css("display", "block");
                 $("#userLost").html(charList[currOpp].name + " wins!");
                 $("#remainingCharHead").html("Click here to go back to character selection");
+                var fatality = $("<audio>");
+                fatality.attr("src", "assets/sounds/fatality.mp3");
+                fatality[0].play();
             }
-
-            $("#userCharHealth").html(userHealth);
-            $("#userCharAtk").html(userAtk);
-            if (compHealth > 0) {
-                $("#compCharHealth").html(compHealth);
-            } else {
-                isCharChosen = false;
+            //handle if comp is dead
+            if (compHealth <= 0) {
+            	if (userHealth > 0) {
+                	isCharChosen = false;
+            	}
                 remainingOpps--;
                 if (remainingOpps === 0) {
                     $("#noOpponent").html(charList[userCharIndex].name + " wins!");
@@ -120,6 +138,14 @@ window.onload = function() {
                 }
                 $("#compCharBox").css("display", "none");
                 $("#noOpponent").css("display", "block");
+                var fatality = $("<audio>");
+                fatality.attr("src", "assets/sounds/fatality.mp3");
+                fatality[0].play();
+            }
+            //handle if tied!
+            if ((userHealth <= 0) && (compHealth <= 0)) {
+            	$("#userLost").html("It's a tie!");
+            	$("#noOpponent").html("It's a tie!");
             }
         }
     });

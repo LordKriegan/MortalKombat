@@ -12,7 +12,7 @@ var charList = [
 		sex: "male",
 		atkPower: 12,
 		ctrAtkPower: 11,
-		health: 120,
+		health: 130,
 		img: "assets/images/characters/raiden.png"
 	},
 	{
