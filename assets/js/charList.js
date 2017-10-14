@@ -2,33 +2,33 @@ var charList = [
 	{
 		name: "Liu Kang",
 		sex: "male",
-		atkPower: 8,
-		ctrAtkPower: 10,
-		health: 50,
+		atkPower: 11,
+		ctrAtkPower: 12,
+		health: 95,
 		img: "assets/images/characters/liukang.png"
 	},
 	{
 		name: "Raiden",
 		sex: "male",
-		atkPower: 10,
-		ctrAtkPower: 12,
-		health: 60,
+		atkPower: 12,
+		ctrAtkPower: 11,
+		health: 120,
 		img: "assets/images/characters/raiden.png"
 	},
 	{
 		name: "Sonya Blade",
 		sex: "female",
-		atkPower: 9,
+		atkPower: 10,
 		ctrAtkPower: 11,
-		health: 40,
+		health: 110,
 		img: "assets/images/characters/sonyablade.png"
 	},
 	{
 		name: "Kitana",
 		sex: "female",
-		atkPower: 7,
+		atkPower: 9,
 		ctrAtkPower: 10,
-		health: 55,
+		health: 115,
 		img: "assets/images/characters/kitana.png"
 	}
 ]

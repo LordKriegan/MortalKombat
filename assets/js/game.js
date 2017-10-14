@@ -18,7 +18,7 @@ window.onload = function() {
         }, false);
     }
     //end loop code
-    // mkMusic[0].play();
+    mkMusic[0].play();
 
     //setup fight screen
     $("#userCharName").html(charList[userCharIndex].name);
