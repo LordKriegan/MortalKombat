@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Character Selection</title>
+    <title>Character Selection</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
@@ -9,8 +10,29 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/js/charList.js"></script>
+    <script src="assets/js/charSelect.js"></script>
 </head>
-<body>
 
+<body>
+    <div class="jumbotron pgHead mkFont">
+        Mortal Kombat
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default clearPanel">
+                    <div>
+                        <h3 class="panel-title mkFont" id="charSelectHeader">Character Selection</h3>
+                    </div>
+                    <hr style="margin: 0;">
+                    <div class="panel-body mkFont" id="charSelection">
+						<!-- Characters will load here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
