@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "MortalKombat";
+	src: url("../fonts/mk4.ttf");
+}
+/*https://css-tricks.com/perfect-full-page-background-image/*/
+html { 
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+body {
+	background: rgba(0, 0, 0 , 0);
+}
