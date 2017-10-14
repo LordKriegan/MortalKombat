@@ -85,8 +85,14 @@ body {
 	color: red;
 }
 
-.padMe {
+.padMe { /*insert Star Wars joke here*/
 	padding: 15px 0 15px 0;
+}
+
+#noOpponent {
+	font-family: "MortalKombat";
+	color: red;
+	font-size: 50px;
 }
 
 #remainingCharList {
@@ -97,4 +103,9 @@ body {
 .remainingChars {
 	width: 25%;
 	height: 25%;
+	border-radius: 20px;
+}
+
+.remainingChars:hover {
+	box-shadow: 0 0 3pt 2pt black;
 }

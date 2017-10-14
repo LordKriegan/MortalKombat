@@ -34,4 +34,9 @@ window.onload = function() {
 		//append to #charSelection
 		$("#charSelection").append(newCharacter);
 	}
+
+	$(".characterBox").on("click", function() {
+		localStorage.setItem("userChar", $(this).attr("data-index"));
+		location.href = "game.html";
+	});
 }
