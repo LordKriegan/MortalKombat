@@ -70,3 +70,31 @@ body {
     color: red;
     text-align: center;
 }
+
+.img-responsive-center {
+	margin: 0 auto;
+}
+.centerStuff {
+	text-align: center;
+}
+
+#fightBtn {
+	font-family: "MortalKombat";
+	font-size: 30px;
+	background: rgba(120, 120, 120, 0.5);
+	color: red;
+}
+
+.padMe {
+	padding: 15px 0 15px 0;
+}
+
+#remainingCharList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.remainingChars {
+	width: 25%;
+	height: 25%;
+}
