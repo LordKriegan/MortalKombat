@@ -2,8 +2,8 @@ window.onload = function() {
 	var mkMusic = $("<audio>");
 	mkMusic.attr("src", "assets/sounds/mkcharselect.mp3")
 //https://stackoverflow.com/questions/3273552/html5-audio-looping
-	if (typeof mkMusic.loop === "boolean") {
-		mkMusic = true;
+	if (typeof mkMusic[0].loop === "boolean") {
+		mkMusic[0].loop = true;
 	}
 	else {
 		mkMusic[0].addEventListener("ended", function() {
